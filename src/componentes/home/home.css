@@ -1,0 +1,74 @@
+
+.hero {
+width: 100vh;
+  height: 100vh;
+  background: url("banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000000;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background: #4caf50;
+  color: #000000;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #388e3c;
+}
+
+/* Seções */
+.section {
+  padding: 80px 20px;
+}
+
+.section.light {
+  background: #bbbbbb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid de produtos */
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: #222;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+}

@@ -1,0 +1,149 @@
+.direcionais {
+    position: relative;  
+    text-decoration: none; 
+    color: #000; 
+    padding-bottom: 5px; 
+}
+
+.direcionais::after {
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 2px; 
+    display: block;
+    margin-top: 5px;
+    background: #DF0022; 
+    bottom: 0; 
+    left: 0;
+    
+ 
+    transition: width 0.3s ease; 
+}
+
+.direcionais:hover::after {
+    width: 100%; 
+}
+.hero-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: white;   
+  transition: all 0.3s ease; 
+  padding: 0px 0px;        
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.hero-container.scrolled {
+    height: 70px;
+  background: rgba(255, 255, 255, 0.9); /* fundo branco com transparência */                 /* diminui altura */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* leve sombra para destacar */
+}
+
+/* Logo ajustável */
+.logo {
+  height: 50px;
+  transition: height 0.3s ease;
+}
+
+.hero-container.scrolled .logo {
+  height: 45px; 
+}
+
+
+
+.desktop-nav {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.desktop-nav a {
+    color: #007943;
+    text-decoration: none;
+    font-size: 2.2vh;
+}
+
+.desktop-nav button {
+    cursor: pointer;
+    background-color: #DF231D;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 2.7vh;
+    padding: 1.2vh 3vh;
+    transition: 0.15s;
+}
+
+.desktop-nav button:hover {
+    transform: scale(1.05);
+
+}
+
+.hamburger {
+    display: none;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+}
+
+.mobile-menu {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 70%;
+    background: #fff;
+    border-radius: 0 0 0 25px;
+    padding: 4vh 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    font-size: 2.4vh;
+}
+
+.mobile-menu a{
+    font-family: "Lato", sans-serif;
+    color: #424e61;
+    text-decoration: none;
+}
+
+.close-btn {
+    font-size: 3vh;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.mobile-cta {
+    border-radius: 4px;
+    margin-top: 4vh;
+    background: #0f1b2d;
+    color: white;
+    padding: 2vh 0;
+    font-size: 2vh;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo-container img {
+        width: 12vh;
+    }
+}
