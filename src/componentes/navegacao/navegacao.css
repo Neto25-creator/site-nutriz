@@ -1,71 +1,77 @@
 .hero-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  background-color: rgba(255, 255, 255, 0.3);   
-  transition: all 0.3s ease; 
-  padding: 0px 0px;        
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-   
-}
-
-.hero-container.scrolled {
-    backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  height: 55px;
-  background-color: rgba(211, 211, 211, 0.2); /* fundo branco com transparência */                 /* diminui altura */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* leve sombra para destacar */
-}
-
- 
-.referencias {
-    margin-right: 10vw;
+    position: fixed;
+    font-family: "Roboto", sans-serif;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    transition: all 0.3s ease;
+    padding: 0px 0px;
     display: flex;
-    gap: 2vw;
-    align-items: center;;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1000;
+}
+
+.desktop-nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.);
+    margin-top: 20px;
+    padding: 19px 10px;
+    border-radius: 50px;
+}
+
+.hero-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+.referencias {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    gap: 2.3rem;
+    align-items: center;
 }
 
 
 .direcionais {
-    position: relative;  
-    text-decoration: none; 
-    color: #000; 
-    padding-bottom: 2px; 
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 2px;
 }
 
 .direcionais::after {
     content: '';
     position: absolute;
-    width: 0; 
-    height: 2px; 
+    width: 0;
+    height: 2px;
     display: block;
     margin-top: 5px;
-    background: #DF0022; 
-    bottom: 0; 
+    background: #DF0022;
+    bottom: 0;
     left: 0;
-    transition: width 0.3s ease; 
+    transition: width 0.3s ease;
 }
 
 .direcionais:hover::after {
-    width: 100%; 
+    width: 100%;
 }
 
 
 
 /* Logo ajustável */
 .logo {
-  height: 40px;
-  transition: height 0.3s ease;
+    margin-top: 25px;
+    height: 40px;
+    transition: height 0.3s ease;
 }
 
 .hero-container.scrolled .logo {
-  height: 40px; 
+    height: 40px;
 }
 
 
@@ -79,7 +85,14 @@
 .desktop-nav a {
     color: #000000;
     text-decoration: none;
-    font-size: 1vw;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.botao-contato {
+    margin-top: 25px;
+    background-color: #485C11;
+    border-radius: 25px;
 }
 
 .desktop-nav button {
@@ -107,7 +120,7 @@
 .mobile-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 200;
 }
 
@@ -125,7 +138,7 @@
     font-size: 2.4vh;
 }
 
-.mobile-menu a{
+.mobile-menu a {
     font-family: "Lato", sans-serif;
     color: #424e61;
     text-decoration: none;
@@ -161,4 +174,23 @@
     .logo-container img {
         width: 12vh;
     }
+}
+
+
+@media (min-width: 1920px) {
+    .desktop-nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.);
+    margin-top: 40px;
+    padding: 19px 10px;
+    border-radius: 50px;
+}
+
+.desktop-nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.5vh;
+    font-weight: bold;
+}
 }

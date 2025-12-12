@@ -35,12 +35,11 @@ export function Header() {
                             <a className="direcionais" href="#produtos">Produtos</a>
                             <a className="direcionais" href="#receitas">Receitas</a>
                         </div>
-                        <div className='botoes'>
-                            <a href="#contato">
-                                <button class="button">Contato</button>
-                            </a>
-                        </div>
+                        
                     </div>
+                    <div className='botoes'>
+                                <button className="botao-contato">Contato</button>
+                        </div>
                 </div>
                 {/* --- HAMBURGER ICON (MOBILE) --- */}
                 <div

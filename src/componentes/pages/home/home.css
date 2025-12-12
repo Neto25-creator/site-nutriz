@@ -1,60 +1,62 @@
-/* Reset básico */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Merriweather", serif;
   background-color: #ffffff;
 }
+
+.brocolis_home {
+  background-color: #000000;
+  width: 10px;
+}
+
 /* A barra inteira */
 ::-webkit-scrollbar {
-  width: 8px; /* Largura da barra */
+  width: 8px;
+  /* Largura da barra */
 }
 
 /* O trilho (a parte de trás) */
 ::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.9);   /* Fundo transparente */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Fundo transparente */
 }
 
 /* O "polegar" (a parte que você arrasta) */
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2); /* Preto com 20% de opacidade */
-  border-radius: 10px; /* Cantos arredondados */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Preto com 20% de opacidade */
+  border-radius: 10px;
+  /* Cantos arredondados */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.5); /* Mais visível ao passar o mouse */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Mais visível ao passar o mouse */
 }
-:root{
-  --vermelho : #DF231D;
+
+:root {
+  --vermelho: #DF231D;
   --verde: #2D8F5B;
 }
 
 /* Hero com vídeo de fundo */
 .hero {
   position: relative;
+  display: flex;
+  align-items: center;
+  /* Alinha verticalmente ao centro */
+  justify-content: center;
   width: 100vw;
+  /* Alinha horizontalmente ao centro */
   height: 100vh;
+  /* Ocupa toda a altura da tela */
+  background-color: #ffffff;
+  /* Cor de fundo opcional */
+  text-align: center;
   overflow: hidden;
 }
 
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-
-
-
-.receita-video {
-    border-radius: 16px;
-    height: 80vh;
-    margin-left: 40vw;
-}
 /* Overlay escuro para contraste */
 .hero-overlay {
   position: absolute;
@@ -62,25 +64,38 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.4);
   z-index: 1;
 }
 
-/* Conteúdo centralizado */
 .hero-content {
+  margin-top: 60vh;
   position: relative;
   z-index: 2;
-  text-align: center;
-  color: #fff;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centraliza horizontalmente os filhos */
+  justify-content: center;
+  /* Centraliza verticalmente os filhos */
+  padding: 2rem;
 }
 
+
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #1f5522;
 }
+
+
+.brocolis-bg {
+  width: 85%;
+  margin: 2rem 0;
+}
+
+
 
 
 .hero-content p {
@@ -89,15 +104,17 @@ body {
 }
 
 .cta-button {
-   cursor: pointer;
-    background-color: #DF231D;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    font-size: 1.5vw;
-    padding: 1vh 3.5vh;
-    transition: 0.15s;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
+
 
 .cta-button:hover {
   background: #9c1914;
@@ -115,26 +132,99 @@ body {
   color: #000000;
 }
 
-.brocolis01{
+.btn-sb {
+  margin-top: 20px;
+  background-color: var(--vermelho);
+}
+
+
+.brocolis01 {
   width: 35vw;
   border-radius: 16px;
   margin-top: 5vw;
   margin-left: 10vw;
 }
+
 .titulo01 {
- margin-top: 10vh;
- font-size: 20px;
+  margin-top: 10vh;
+  font-size: 20px;
 }
+
 .titulo01 span {
   color: #DF231D;
 }
 
-.descricao01{
+.descricao01 {
   color: #292929;
 }
- 
+
+.diferenciais{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: transparent;
+  justify-content: space-around;
+  font-size: 30px;
+  width: 100%;
+  
+}
+
+.cards{
+  margin-top: 4vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cards span {
+  font-size: 25px;
+  font-weight: bold;
+  ;
+}
+
+.cards h2 {
+font-weight: 100;
+ font-size: 20px;
+}
+
+.card-diferenciais-1 {
+  border-radius: 20px;
+  margin-left: 40px;
+  padding: 30px;
+  height: 30%;
+  color: #007943;
+  background-color: #e2e2e2;
+  font-size: 20px;
+  width: 100%;
+  height: 80%;
+  justify-content: space-around;
+}
+.card-diferenciais-2 {
+  border-radius: 20px;
+  margin-left: 40px;
+  padding: 30px;
+  height: 30%;
+  color: #ffffff;
+  background-color: var(--vermelho);
+  font-size: 20px;
+  width: 100%;
+  height: 80%;
+  justify-content: space-around;
+}
+.card-diferenciais-3 {
+  border-radius: 20px;
+  margin-left: 40px;
+  padding: 30px;
+  height: 30%;
+  color: #ffffff;
+  background-color: #007943;
+  font-size: 20px;
+  width: 100%;
+  height: 80%;
+  justify-content: space-around;
+}
 
 .section-content {
+  color: #000000;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -142,8 +232,52 @@ body {
 }
 
 .footer {
-  
+
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+
+
+@media (min-width: 1920px) {
+   
+/* Overlay escuro para contraste */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  margin-top: 50vh;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centraliza horizontalmente os filhos */
+  justify-content: center;
+  /* Centraliza verticalmente os filhos */
+  padding: 2rem;
+}
+
+
+.hero-content h1 {
+  font-size: 3.7rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #1f5522;
+}
+
+
+.brocolis-bg {
+  margin-bottom: 100px;
+  height: 100%;
+  width: 120%;
+  margin: 2rem 0;
+}
 }
