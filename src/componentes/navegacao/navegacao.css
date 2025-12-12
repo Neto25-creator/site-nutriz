@@ -1,8 +1,42 @@
+.hero-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.3);   
+  transition: all 0.3s ease; 
+  padding: 0px 0px;        
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+   
+}
+
+.hero-container.scrolled {
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 55px;
+  background-color: rgba(211, 211, 211, 0.2); /* fundo branco com transparência */                 /* diminui altura */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* leve sombra para destacar */
+}
+
+ 
+.referencias {
+    margin-right: 10vw;
+    display: flex;
+    gap: 2vw;
+    align-items: center;;
+}
+
+
 .direcionais {
     position: relative;  
     text-decoration: none; 
     color: #000; 
-    padding-bottom: 5px; 
+    padding-bottom: 2px; 
 }
 
 .direcionais::after {
@@ -15,42 +49,23 @@
     background: #DF0022; 
     bottom: 0; 
     left: 0;
-    
- 
     transition: width 0.3s ease; 
 }
 
 .direcionais:hover::after {
     width: 100%; 
 }
-.hero-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background: white;   
-  transition: all 0.3s ease; 
-  padding: 0px 0px;        
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 1000;
-}
 
-.hero-container.scrolled {
-    height: 70px;
-  background: rgba(255, 255, 255, 0.9); /* fundo branco com transparência */                 /* diminui altura */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* leve sombra para destacar */
-}
+
 
 /* Logo ajustável */
 .logo {
-  height: 50px;
+  height: 40px;
   transition: height 0.3s ease;
 }
 
 .hero-container.scrolled .logo {
-  height: 45px; 
+  height: 40px; 
 }
 
 
@@ -62,24 +77,24 @@
 }
 
 .desktop-nav a {
-    color: #007943;
+    color: #000000;
     text-decoration: none;
-    font-size: 2.2vh;
+    font-size: 1vw;
 }
 
 .desktop-nav button {
     cursor: pointer;
     background-color: #DF231D;
     border: none;
-    border-radius: 6px;
-    color: #fff;
-    font-size: 2.7vh;
-    padding: 1.2vh 3vh;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.2vw;
+    padding: 0.5vh 3vh;
     transition: 0.15s;
 }
 
 .desktop-nav button:hover {
-    transform: scale(1.05);
+    background-color: #c0001d;
 
 }
 

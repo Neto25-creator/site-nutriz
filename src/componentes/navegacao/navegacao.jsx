@@ -17,30 +17,34 @@ export function Header() {
 
     return (
         <>
-            <div className={`hero-container ${scrolled ? 'scrolled' : ''}`}>
-                
-                <div className="logo-container">
-                    <img className="logo" src={logo} alt="logo nutriz" />
+
+
+            <div className='navegacao'>
+                <div className={`hero-container ${scrolled ? 'scrolled' : ''}`}>
+
+                    <div className="logo-container">
+                        <img className="logo" src={logo} alt="logo nutriz" />
+                    </div>
+
+                    {/* --- DESKTOP NAV --- */}
+                    <div className="hero-nav desktop-nav">
+                        <div className='referencias'>
+                            <a className="direcionais" href="#inicio">Início</a>
+                            <a className="direcionais" href="#quem-somos">Quem somos</a>
+                            <a className="direcionais" href="#certificacoes">Certificações</a>
+                            <a className="direcionais" href="#produtos">Produtos</a>
+                            <a className="direcionais" href="#receitas">Receitas</a>
+                        </div>
+                        <div className='botoes'>
+                            <a href="#contato">
+                                <button class="button">Contato</button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                {/* --- DESKTOP NAV --- */}
-                <div className="hero-nav desktop-nav">
-                    <a className="direcionais" href="#inicio">INÍCIO</a>
-                    <a className="direcionais" href="#quem-somos">QUEM SOMOS</a>
-                    <a className="direcionais" href="#certificacoes">CERTIFICAÇÕES</a>
-                    <a className="direcionais" href="#produtos">PRODUTOS</a>
-                    <a className="direcionais" href="#receitas">RECEITAS</a>
-
-                    <a href="#contato">
-                     
-<button class="button">Contato</button>
-
-                    </a>
-                </div>
-
                 {/* --- HAMBURGER ICON (MOBILE) --- */}
-                <div 
-                    className="hamburger" 
+                <div
+                    className="hamburger"
                     onClick={() => setMenuOpen(true)}
                 >
                     ☰
@@ -51,8 +55,8 @@ export function Header() {
             {/* --- MOBILE MENU OVERLAY --- */}
             {menuOpen && (
                 <div className="mobile-overlay" onClick={() => setMenuOpen(false)}>
-                    <div 
-                        className="mobile-menu" 
+                    <div
+                        className="mobile-menu"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className="close-btn" onClick={() => setMenuOpen(false)}>✕</div>
